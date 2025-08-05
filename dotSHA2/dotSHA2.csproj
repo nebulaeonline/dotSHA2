@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>nebulae.dotSHA2</RootNamespace>
+        <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+        <PackageId>nebulae.dotSHA2</PackageId>
+        <Version>0.1.0</Version>
+        <Authors>Robert C. Horvath III</Authors>
+        <Company>Nebulae Foundation LLC</Company>
+        <Description>High-performance cross-platform BoringSSL wrapper for SHA2 hashing</Description>
+        <PackageTags>hash AVX2 sha2 sha256 stream neon</PackageTags>
+        <RepositoryUrl>https://github.com/nebulaeonline/dotSHA2</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/nebulaeonline/dotSHA2</PackageProjectUrl>
+        <IncludeSymbols>false</IncludeSymbols>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Copyright>Copyright © 2025 Nebulae Foundation LLC </Copyright>
+        <PackageReadmeFile>docs\README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="docs">
+            <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </None>
+        <None Include="runtimes\**\native\*" Pack="true" PackagePath="runtimes\" CopyToOutputDirectory="PreserveNewest" />
+    </ItemGroup>
+   
+</Project>
